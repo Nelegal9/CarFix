@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -45,6 +46,13 @@ public class CarRepairUpdateFragment extends Fragment {
         binding.updateCarRepairButton.setOnClickListener(this::updateItem);
         binding.backTextButtonU.setOnClickListener(this::back);
         binding.deleteCarRepairFloatingActionButtonU.setOnClickListener(this::deleteCarRepair);
+
+        requireActivity().getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                back(getView());
+            }
+        });
 
         return binding.getRoot();
     }

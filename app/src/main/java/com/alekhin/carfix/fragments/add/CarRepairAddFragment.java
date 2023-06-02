@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -31,6 +32,13 @@ public class CarRepairAddFragment extends Fragment {
 
         binding.addCarRepairButton.setOnClickListener(this::insertDataToDatabase);
         binding.backTextButton.setOnClickListener(this::back);
+
+        requireActivity().getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                back(getView());
+            }
+        });
 
         return binding.getRoot();
     }
@@ -61,7 +69,7 @@ public class CarRepairAddFragment extends Fragment {
         String repairType = binding.repairTypeTextField.getText().toString();
         String masterName = binding.masterNameTextField.getText().toString();
 
-        if (inputCheck(carBrand, carModel, carNumber, repairType, masterName)) {
+        if (!carBrand.equals("") || !carModel.equals("") || !carNumber.equals("") || !repairType.equals("") || !masterName.equals("")) {
             AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
             builder.setTitle(R.string.back_title);
             builder.setMessage(R.string.back_confirm_not_to_add);
