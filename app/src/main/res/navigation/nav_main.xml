@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/carRepairListFragment">
+
+    <fragment
+        android:id="@+id/carRepairListFragment"
+        android:name="com.alekhin.carfix.fragments.list.CarRepairListFragment"
+        android:label="fragment_car_repair_list"
+        tools:layout="@layout/fragment_car_repair_list" >
+        <action
+            android:id="@+id/action_carRepairListFragment_to_carRepairAddFragment"
+            app:destination="@id/carRepairAddFragment" />
+        <action
+            android:id="@+id/action_carRepairListFragment_to_carRepairUpdateFragment"
+            app:destination="@id/carRepairUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carRepairAddFragment"
+        android:name="com.alekhin.carfix.fragments.add.CarRepairAddFragment"
+        android:label="fragment_car_repair_add"
+        tools:layout="@layout/fragment_car_repair_add" >
+        <action
+            android:id="@+id/action_carRepairAddFragment_to_carRepairListFragment"
+            app:destination="@id/carRepairListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carRepairUpdateFragment"
+        android:name="com.alekhin.carfix.fragments.update.CarRepairUpdateFragment"
+        android:label="fragment_car_repair_update"
+        tools:layout="@layout/fragment_car_repair_update" >
+        <action
+            android:id="@+id/action_carRepairUpdateFragment_to_carRepairListFragment"
+            app:destination="@id/carRepairListFragment" />
+        <argument
+            android:name="currentCarRepair"
+            app:argType="com.alekhin.carfix.room.CarRepair" />
+    </fragment>
+</navigation>
