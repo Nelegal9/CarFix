@@ -20,32 +20,37 @@ public class CarRepairListAdapter extends RecyclerView.Adapter<CarRepairListAdap
 
    public static class CarRepairListViewHolder extends RecyclerView.ViewHolder {
        CardCarRepairBinding binding;
+
        public CarRepairListViewHolder(@NonNull CardCarRepairBinding binding) {
            super(binding.getRoot());
            this.binding = binding;
+       }
+
+       void bind(CarRepair carRepair) {
+           binding.carRepairNumber.setText(String.valueOf(carRepair.id));
+           binding.carBrand.setText(carRepair.carBrand);
+           binding.carModel.setText(carRepair.carModel);
+           binding.carNumber.setText(carRepair.carNumber);
+           binding.repairType.setText(carRepair.repairType);
+           binding.masterName.setText(carRepair.masterName);
+
+           binding.card.setOnClickListener(v -> {
+               NavDirections action = CarRepairListFragmentDirections.actionCarRepairListFragmentToCarRepairUpdateFragment(carRepair);
+               Navigation.findNavController(v).navigate(action);
+           });
        }
    }
 
     @NonNull
     @Override
     public CarRepairListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new CarRepairListViewHolder(CardCarRepairBinding.inflate(LayoutInflater.from(parent.getContext())));
+        return new CarRepairListViewHolder(CardCarRepairBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull CarRepairListViewHolder holder, int position) {
         CarRepair currentCarRepair = carRepairList.get(position);
-        holder.binding.carRepairNumber.setText(String.valueOf(currentCarRepair.id));
-        holder.binding.carBrand.setText(currentCarRepair.carBrand);
-        holder.binding.carModel.setText(currentCarRepair.carModel);
-        holder.binding.carNumber.setText(currentCarRepair.carNumber);
-        holder.binding.repairType.setText(currentCarRepair.repairType);
-        holder.binding.masterName.setText(currentCarRepair.masterName);
-
-        holder.binding.card.setOnClickListener(v -> {
-            NavDirections action = CarRepairListFragmentDirections.actionCarRepairListFragmentToCarRepairUpdateFragment(currentCarRepair);
-            Navigation.findNavController(v).navigate(action);
-        });
+        holder.bind(currentCarRepair);
     }
 
     @Override

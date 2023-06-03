@@ -25,4 +25,8 @@ public class CarRepairRepository {
     void deleteCarRepair(CarRepair carRepair) {
         carRepairDao.deleteCarRepair(carRepair);
     }
+
+    LiveData<List<CarRepair>> searchDatabase(String searchQuery) {
+        return carRepairDao.searchDatabase(searchQuery);
+    }
 }

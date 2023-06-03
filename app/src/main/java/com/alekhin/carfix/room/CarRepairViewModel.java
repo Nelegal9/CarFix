@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CarRepairViewModel extends AndroidViewModel {
     public LiveData<List<CarRepair>> readAllData;
-    private CarRepairRepository carRepairRepository;
+    private final CarRepairRepository carRepairRepository;
 
     public CarRepairViewModel(@NonNull Application application) {
         super(application);
@@ -30,5 +30,9 @@ public class CarRepairViewModel extends AndroidViewModel {
 
     public void deleteCarRepair(CarRepair carRepair) {
         carRepairRepository.deleteCarRepair(carRepair);
+    }
+
+    public LiveData<List<CarRepair>> searchDatabase(String searchQuery) {
+        return carRepairRepository.searchDatabase(searchQuery);
     }
 }

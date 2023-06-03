@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -18,6 +17,8 @@ import com.alekhin.carfix.R;
 import com.alekhin.carfix.databinding.FragmentCarRepairUpdateBinding;
 import com.alekhin.carfix.room.CarRepair;
 import com.alekhin.carfix.room.CarRepairViewModel;
+
+import java.util.Objects;
 
 public class CarRepairUpdateFragment extends Fragment {
     private FragmentCarRepairUpdateBinding binding;
@@ -47,22 +48,15 @@ public class CarRepairUpdateFragment extends Fragment {
         binding.backTextButtonU.setOnClickListener(this::back);
         binding.deleteCarRepairFloatingActionButtonU.setOnClickListener(this::deleteCarRepair);
 
-        requireActivity().getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                back(getView());
-            }
-        });
-
         return binding.getRoot();
     }
 
     private void updateItem(View v) {
-        String carBrand = binding.carBrandTextFieldU.getText().toString();
-        String carModel = binding.carModelTextFieldU.getText().toString();
-        String carNumber = binding.carNumberTextFieldU.getText().toString();
-        String repairType = binding.repairTypeTextFieldU.getText().toString();
-        String masterName = binding.masterNameTextFieldU.getText().toString();
+        String carBrand = Objects.requireNonNull(binding.carBrandTextFieldU.getText()).toString();
+        String carModel = Objects.requireNonNull(binding.carModelTextFieldU.getText()).toString();
+        String carNumber = Objects.requireNonNull(binding.carNumberTextFieldU.getText()).toString();
+        String repairType = Objects.requireNonNull(binding.repairTypeTextFieldU.getText()).toString();
+        String masterName = Objects.requireNonNull(binding.masterNameTextFieldU.getText()).toString();
 
         if (inputCheck(carBrand, carModel, carNumber, repairType, masterName)) {
             CarRepair updatedCarRepair = new CarRepair(args.id, carBrand, carModel, carNumber, repairType, masterName);

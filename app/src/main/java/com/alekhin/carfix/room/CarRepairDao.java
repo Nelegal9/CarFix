@@ -23,4 +23,7 @@ public interface CarRepairDao {
 
     @Query("SELECT * FROM carrepair ORDER BY id ASC")
     LiveData<List<CarRepair>> readAllData();
+
+    @Query("SELECT * FROM carrepair WHERE carBrand LIKE :searchQuery OR carModel LIKE :searchQuery OR carNumber LIKE :searchQuery OR repairType LIKE :searchQuery OR masterName LIKE :searchQuery")
+    LiveData<List<CarRepair>> searchDatabase(String searchQuery);
 }

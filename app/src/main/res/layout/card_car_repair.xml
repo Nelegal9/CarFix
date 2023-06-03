@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.transformation.TransformationChildCard
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/carRepairNumber"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/carBrandLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,9 +48,9 @@
                 app:layout_constraintStart_toEndOf="@+id/carRepairNumber"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/carBrand"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
@@ -61,7 +61,7 @@
                 app:layout_constraintStart_toEndOf="@+id/carBrandLabel"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/carModelLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,9 +71,9 @@
                 app:layout_constraintStart_toEndOf="@+id/carRepairNumber"
                 app:layout_constraintTop_toBottomOf="@+id/carBrandLabel" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/carModel"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -84,7 +84,7 @@
                 app:layout_constraintStart_toEndOf="@+id/carModelLabel"
                 app:layout_constraintTop_toBottomOf="@+id/carBrand" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/carNumberLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,9 +94,9 @@
                 app:layout_constraintStart_toEndOf="@+id/carRepairNumber"
                 app:layout_constraintTop_toBottomOf="@+id/carModelLabel" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/carNumber"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -107,7 +107,7 @@
                 app:layout_constraintStart_toEndOf="@+id/carNumberLabel"
                 app:layout_constraintTop_toBottomOf="@+id/carModel" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/repairTypeLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -117,9 +117,9 @@
                 app:layout_constraintStart_toEndOf="@+id/carRepairNumber"
                 app:layout_constraintTop_toBottomOf="@+id/carNumberLabel" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/repairType"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -130,7 +130,7 @@
                 app:layout_constraintStart_toEndOf="@+id/repairTypeLabel"
                 app:layout_constraintTop_toBottomOf="@+id/carNumber" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/masterNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,9 +142,9 @@
                 app:layout_constraintStart_toEndOf="@+id/carRepairNumber"
                 app:layout_constraintTop_toBottomOf="@+id/repairTypeLabel" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/masterName"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -158,5 +158,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/repairType" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.transformation.TransformationChildCard>
 </androidx.constraintlayout.widget.ConstraintLayout>

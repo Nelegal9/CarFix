@@ -3,29 +3,31 @@
 
     <string name="repair_list">Car Repair List</string>
 
-    <string name="car_brand_label">Car Brand:</string>
-    <string name="car_model_label">Car Model:</string>
-    <string name="car_number_label">Car Number:</string>
-    <string name="repair_type_label">Repair Type:</string>
-    <string name="master_name_label">Master Name:</string>
+    <string name="search">Search…</string>
+
+    <string name="car_brand_label">Car brand:</string>
+    <string name="car_model_label">Car model:</string>
+    <string name="car_number_label">Car number:</string>
+    <string name="repair_type_label">Repair type:</string>
+    <string name="master_name_label">Master name:</string>
     <string name="repair_number_label">Repair №</string>
 
     <string name="repair_number">0</string>
-    <string name="car_brand">Car Brand</string>
-    <string name="car_model">Car Model</string>
-    <string name="car_number">Car Number</string>
-    <string name="repair_type">Repair Type</string>
-    <string name="master_name">Master Name</string>
+    <string name="car_brand">Car brand</string>
+    <string name="car_model">Car model</string>
+    <string name="car_number">Car number</string>
+    <string name="repair_type">Repair type</string>
+    <string name="master_name">Master name</string>
 
     <string name="new_repair">New Repair</string>
-    <string name="add_repair">Add Repair</string>
+    <string name="add_repair">Add repair</string>
     <string name="back">Back</string>
     <string name="back_title">Exit?</string>
     <string name="back_confirm_not_to_add">Are you sure you want to return without saving?</string>
     <string name="add_success">Successfully added!</string>
     <string name="add_failed">Please fill out all fields.</string>
 
-    <string name="update_repair">Update Repair</string>
+    <string name="update_repair">Update repair</string>
     <string name="update_repair_success">Successfully updated!</string>
     <string name="back_confirm_to_delete">Are you sure you want to delete?</string>
     <string name="delete_title">Delete?</string>

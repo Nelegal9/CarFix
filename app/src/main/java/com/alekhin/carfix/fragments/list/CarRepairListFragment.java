@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
@@ -20,18 +21,19 @@ import com.alekhin.carfix.room.CarRepair;
 import com.alekhin.carfix.room.CarRepairViewModel;
 
 public class CarRepairListFragment extends Fragment {
-    private FragmentCarRepairListBinding binding;
 
     SharedPreferences sharedPreferences;
     private static final String KEY = "on_boarding_completed";
+
+    CarRepairListAdapter carRepairListAdapter;
 
     private CarRepairViewModel mCarRepairViewModel;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentCarRepairListBinding.inflate(inflater);
+        com.alekhin.carfix.databinding.FragmentCarRepairListBinding binding = FragmentCarRepairListBinding.inflate(inflater);
 
-        CarRepairListAdapter carRepairListAdapter = new CarRepairListAdapter();
+        carRepairListAdapter = new CarRepairListAdapter();
         binding.carRepairList.setAdapter(carRepairListAdapter);
         binding.carRepairList.setLayoutManager(new LinearLayoutManager(requireContext()));
 
@@ -39,6 +41,20 @@ public class CarRepairListFragment extends Fragment {
         mCarRepairViewModel.readAllData.observe(getViewLifecycleOwner(), carRepairListAdapter::setData);
 
         firstTimeCheck();
+
+        binding.searchCarRepair.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                if (query != null) searchDatabase(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+                if (query != null) searchDatabase(query);
+                return true;
+            }
+        });
 
         binding.addCarRepairFloatingActionButton.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_carRepairListFragment_to_carRepairAddFragment));
 
@@ -59,5 +75,10 @@ public class CarRepairListFragment extends Fragment {
         sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
         @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY, true).apply();
+    }
+
+    private void searchDatabase(String query) {
+        String searchQuery = "%" + query + "%";
+        mCarRepairViewModel.searchDatabase(searchQuery).observe(this, terms -> carRepairListAdapter.setData(terms));
     }
 }
