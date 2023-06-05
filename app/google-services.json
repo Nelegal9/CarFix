@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1074776566758",
+    "project_id": "javaappsauth",
+    "storage_bucket": "javaappsauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074776566758:android:1a9209904099f5e5eb4427",
+        "android_client_info": {
+          "package_name": "com.alekhin.carfix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074776566758-8nmm182fdg69b9bei59uflijcsmukerg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByJvhhIAIdgiM48GNS9VWrL3sE8si4rgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074776566758-8nmm182fdg69b9bei59uflijcsmukerg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
