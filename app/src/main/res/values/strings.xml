@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">CarFix</string>
 
+    <string name="login_title">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="login_sign_up">Don\'t have an account? Sign up</string>
+
+    <string name="register_title">Register</string>
+    <string name="sign_up">Sign up</string>
+    <string name="register_sign_in">Already have an account? Sign in</string>
+
+    <string name="current_user">Current_user@mail.com</string>
+    <string name="logout">Log out</string>
+
     <string name="repair_list">Car Repair List</string>
 
     <string name="search">Search…</string>

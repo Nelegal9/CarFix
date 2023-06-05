@@ -1,4 +1,4 @@
-package com.alekhin.carfix.fragments.list.add;
+package com.alekhin.carfix.fragments.add;
 
 import android.app.AlertDialog;
 import android.os.Bundle;

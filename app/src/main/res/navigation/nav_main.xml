@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/carRepairAddFragment"
-        android:name="com.alekhin.carfix.fragments.list.add.CarRepairAddFragment"
+        android:name="com.alekhin.carfix.fragments.add.CarRepairAddFragment"
         android:label="fragment_car_repair_add"
         tools:layout="@layout/fragment_car_repair_add" >
         <action
