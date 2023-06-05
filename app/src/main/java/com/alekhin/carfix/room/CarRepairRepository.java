@@ -7,11 +7,9 @@ import java.util.List;
 
 public class CarRepairRepository {
     private final CarRepairDao carRepairDao;
-    LiveData<List<CarRepair>> readAllData;
 
     public CarRepairRepository(@NonNull CarRepairDao carRepairDao) {
         this.carRepairDao = carRepairDao;
-        readAllData = carRepairDao.readAllData();
     }
 
     void addCarRepair(CarRepair carRepair) {

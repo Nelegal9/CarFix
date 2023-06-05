@@ -55,7 +55,8 @@
                     android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/carModelTextField"
@@ -68,9 +69,11 @@
                     android:hint="@string/car_model"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/carBrandTextField" />
+                    app:layout_constraintTop_toBottomOf="@+id/carBrandTextField"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/carNumberTextField"
@@ -83,10 +86,11 @@
                     android:hint="@string/car_number"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/carModelTextField"
-                    tools:ignore="TextFields" />
+                    tools:ignore="TextFields,TextContrastCheck,VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/repairTypeTextField"
@@ -99,9 +103,11 @@
                     android:hint="@string/repair_type"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/carNumberTextField" />
+                    app:layout_constraintTop_toBottomOf="@+id/carNumberTextField"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/masterNameTextField"
@@ -115,10 +121,12 @@
                     android:hint="@string/master_name"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/repairTypeTextField" />
+                    app:layout_constraintTop_toBottomOf="@+id/repairTypeTextField"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -147,7 +155,10 @@
             android:layout_marginBottom="32dp"
             android:clickable="true"
             android:focusable="true"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:text="@string/back"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -14,9 +14,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
-    ActivityLoginBinding binding;
+    private ActivityLoginBinding binding;
 
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     public void onStart() {

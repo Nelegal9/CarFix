@@ -22,10 +22,10 @@ import com.alekhin.carfix.room.CarRepairViewModel;
 
 public class CarRepairListFragment extends Fragment {
 
-    SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences;
     private static final String KEY = "on_boarding_completed";
 
-    CarRepairListAdapter carRepairListAdapter;
+    private CarRepairListAdapter carRepairListAdapter;
 
     private CarRepairViewModel mCarRepairViewModel;
 
@@ -61,7 +61,7 @@ public class CarRepairListFragment extends Fragment {
         return binding.getRoot();
     }
 
-    void firstTimeCheck() {
+    private void firstTimeCheck() {
         sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
         boolean completed = sharedPreferences.getBoolean(KEY, false);
         if (!completed) {
@@ -71,7 +71,7 @@ public class CarRepairListFragment extends Fragment {
         }
     }
 
-    void completeOnBoardingProcess() {
+    private void completeOnBoardingProcess() {
         sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
         @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY, true).apply();

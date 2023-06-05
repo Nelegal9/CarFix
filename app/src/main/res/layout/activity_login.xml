@@ -77,7 +77,8 @@
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="VisualLintTextFieldSize" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordTextField"
@@ -91,10 +92,12 @@
                 android:hint="@string/password"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
+                android:minHeight="48dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailTextField" />
+                app:layout_constraintTop_toBottomOf="@+id/emailTextField"
+                tools:ignore="VisualLintTextFieldSize" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,10 +123,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
         android:text="@string/login_sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInButton"
-        android:focusable="true" />
+        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -59,7 +59,7 @@ public class CarRepairListAdapter extends RecyclerView.Adapter<CarRepairListAdap
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    void setData(List<CarRepair> carRepairList) {
+    public void setData(List<CarRepair> carRepairList) {
        this.carRepairList = carRepairList;
        notifyDataSetChanged();
     }

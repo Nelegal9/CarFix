@@ -69,9 +69,11 @@
                     android:hint="@string/car_brand"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/carModelTextFieldU"
@@ -84,9 +86,11 @@
                     android:hint="@string/car_model"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/carBrandTextFieldU" />
+                    app:layout_constraintTop_toBottomOf="@+id/carBrandTextFieldU"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/carNumberTextFieldU"
@@ -99,10 +103,11 @@
                     android:hint="@string/car_number"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/carModelTextFieldU"
-                    tools:ignore="TextFields" />
+                    tools:ignore="TextFields,TextContrastCheck,VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/repairTypeTextFieldU"
@@ -115,9 +120,11 @@
                     android:hint="@string/repair_type"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/carNumberTextFieldU" />
+                    app:layout_constraintTop_toBottomOf="@+id/carNumberTextFieldU"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/masterNameTextFieldU"
@@ -131,10 +138,12 @@
                     android:hint="@string/master_name"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/repairTypeTextFieldU" />
+                    app:layout_constraintTop_toBottomOf="@+id/repairTypeTextFieldU"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -163,7 +172,10 @@
             android:layout_marginBottom="32dp"
             android:clickable="true"
             android:focusable="true"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:text="@string/back"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
