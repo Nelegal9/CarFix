@@ -26,7 +26,7 @@ public class CarRepairListAdapter extends RecyclerView.Adapter<CarRepairListAdap
            this.binding = binding;
        }
 
-       void bind(CarRepair carRepair) {
+       private void bind(CarRepair carRepair) {
            binding.carRepairNumber.setText(String.valueOf(carRepair.id));
            binding.carBrand.setText(carRepair.carBrand);
            binding.carModel.setText(carRepair.carModel);
