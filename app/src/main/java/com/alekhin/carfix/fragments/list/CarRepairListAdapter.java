@@ -19,7 +19,7 @@ public class CarRepairListAdapter extends RecyclerView.Adapter<CarRepairListAdap
     List<CarRepair> carRepairList = Collections.emptyList();
 
    public static class CarRepairListViewHolder extends RecyclerView.ViewHolder {
-       CardCarRepairBinding binding;
+       private final CardCarRepairBinding binding;
 
        public CarRepairListViewHolder(@NonNull CardCarRepairBinding binding) {
            super(binding.getRoot());
